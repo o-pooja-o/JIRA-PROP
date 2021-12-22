@@ -1,2 +1,2 @@
 # JIRA-PROP
-jira clone
+this is a jira clone project
