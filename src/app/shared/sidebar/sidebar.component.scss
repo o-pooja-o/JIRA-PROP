@@ -1,0 +1,17 @@
+ul {
+    list-style-type: none;
+}
+.sidebar-content {
+    box-sizing: border-box;
+}
+.not-implemented > li:hover a {
+    display: none;
+}
+.not-implemented > li:hover:after {
+    content: 'Not Implemented';
+    cursor: not-allowed;
+    background-color: #dfe1e6;
+}
+.implemented > li:hover {
+    background-color: #ebecf0;
+}
