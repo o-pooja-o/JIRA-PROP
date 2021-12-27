@@ -1,0 +1,19 @@
+$font: 'Roboto';
+.avatar {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.avatar:hover{
+outline: 3px solid #4585FE;
+}
+
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-weight: 400;
+  line-height: 25px;
+  font-family: $font;
+}
