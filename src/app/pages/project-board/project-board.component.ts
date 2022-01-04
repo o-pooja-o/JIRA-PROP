@@ -68,7 +68,6 @@ export class ProjectBoardComponent implements OnInit {
     return this.members$;
   }
   drop(event: Event) {
-    console.log(event);
   }
 }
 

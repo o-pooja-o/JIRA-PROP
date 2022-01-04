@@ -50,7 +50,6 @@ export class ProjectDetailComponent implements OnInit {
   }
 
   onClick() {
-    console.log('hii')
     this.isLoading = true;
     this.changesSaved = true;
     setTimeout(() => {
@@ -64,7 +63,6 @@ export class ProjectDetailComponent implements OnInit {
       this.isLoading = false;
       this.changesSaved = false;
     }, 1500);
-    console.log('', this.projectDetailForm);
   }
 }
 

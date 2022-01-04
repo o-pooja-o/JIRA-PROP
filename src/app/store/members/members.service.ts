@@ -19,7 +19,6 @@ export class MembersService {
     apiResponse.subscribe(_ => {
       this.membersStore.set(members);
       this.membersStore.setLoading(false);
-      console.log('member store updated')
     })
   }
 

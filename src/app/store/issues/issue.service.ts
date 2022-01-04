@@ -28,7 +28,6 @@ export class IssueService {
     apiResponse.subscribe(_ => {
       this.issueStore.set(issues);
       this.issueStore.setLoading(false);
-      console.log('issue store updated');
     });
   }
   add(issue: Issue) {
@@ -37,7 +36,6 @@ export class IssueService {
 
   update(id: number, issue: Partial<Issue>) {
     this.issueStore.update(id, issue);
-    console.log('updated', issues)
   }
 
   // remove(id: ID) {
