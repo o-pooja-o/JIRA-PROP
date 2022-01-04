@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project-detail.component.scss']
 })
 export class ProjectDetailComponent implements OnInit {
-
+  // searchIcon = faSearchIcon;
   constructor() { }
 
   ngOnInit() {
