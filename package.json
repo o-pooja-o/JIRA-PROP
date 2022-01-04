@@ -24,6 +24,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "bootstrap": "^4.6.1",
     "jquery": "^3.6.0",
+    "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
@@ -52,8 +53,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && ng test && ng lint",
-      "pre-push": "npm test"
+      "pre-commit": "pretty-quick --staged && npm run test && npm run lint",
+      "pre-push": "npm run test"
     }
   }
 }

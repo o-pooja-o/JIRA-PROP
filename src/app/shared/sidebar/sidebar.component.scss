@@ -3,6 +3,17 @@ ul {
 }
 .sidebar-content {
     box-sizing: border-box;
+    padding-left: 1 rem;
+    padding-right: 1 rem;
+    background-color: #f4f5f7;
+    height: 100%;
+    // left: 0;
+    min-width: 240 px;
+    overflow-x: hidden;
+    position: relative;
+    // top: 0;
+    width: 100%;
+   box-shadow: 1px 1px 1px solid green;
 }
 .not-implemented > li:hover a {
     display: none;

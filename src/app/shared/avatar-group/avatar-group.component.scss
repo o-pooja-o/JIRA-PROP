@@ -1,0 +1,26 @@
+.avatar img {
+  border-radius: 50%;
+  position: relative;
+  // left: -5px;
+  margin-left: -10px;
+  outline:2px solid white;
+  cursor:pointer;
+  z-index: 1;
+}
+.avatar-big{
+width:36px;
+height:36px;
+}
+ .avatar-small{
+width:20px;
+height:20px;
+ }
+.avatar:hover img{
+    transform: translateY(-5px);
+    transition-duration: .2s;
+    z-index: 2;
+}
+
+.avatars {
+  direction: rtl;
+}

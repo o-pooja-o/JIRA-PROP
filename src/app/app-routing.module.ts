@@ -4,16 +4,16 @@ import { ProjectBoardComponent } from './pages/project-board/project-board.compo
 import { ProjectDetailComponent } from './pages/project-detail/project-detail.component';
 
 const routes: Routes = [
-    // { path: '', component: ProjectDetailComponent },
-    {
-        path: 'project',
-        component: ProjectBoardComponent,
-    },
-    { path: 'settings', component: ProjectDetailComponent },
+  { path: '', component: ProjectBoardComponent },
+  {
+    path: 'project',
+    component: ProjectBoardComponent,
+  },
+  { path: 'settings', component: ProjectDetailComponent },
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule],
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

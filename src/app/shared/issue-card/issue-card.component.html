@@ -1,3 +1,38 @@
-<p>
-  issue-card works!
-</p>
+<div class="issue-card mb-2">
+    <p class="pb-3" style="font-weight: bold; font-family: 'Helvetica'; font-size: '15px'; color: #172b4d">
+        {{ issue?.description }}
+    </p>
+    <div class="d-flex justify-content-between">
+        <div>
+            <img
+                *ngIf="issue?.type === 'STORY'"
+                src="../../../assets/images/bookmark.svg"
+                class="mb-2"
+                width="20px"
+                height="20px"
+            />
+            <i
+                *ngIf="issue?.type === 'TASK'"
+                class="fa fa-check-square ml-1"
+                style="width: '20px'; height: '20px'; color: '#4EACE9'"
+            ></i>
+            <i
+                *ngIf="issue?.type === 'BUG'"
+                class="fa fa-exclamation-circle ml-1"
+                style="width: '20px'; height: '20px'; color: '#E9484B'"
+            ></i>
+            <i
+                *ngIf="issue?.priority === 'LOW'"
+                class="fa fa-arrow-down ml-1"
+                style="width: '20px'; height: '20px'; color: '#5BA167'"
+            ></i>
+            <i
+                *ngIf="issue?.priority === 'HIGH' || issue?.priority === 'MEDIUM'"
+                class="fa fa-arrow-up ml-1"
+                [ngStyle]="{ color: issue?.priority === 'HIGH' ? '#E9484B' : '#EC9C64' }"
+                style="width: '20px'; height: '20px'"
+            ></i>
+        </div>
+        <div><app-avatar-group [size]="'small'" [members]="issue?.assignees || undefined"></app-avatar-group></div>
+    </div>
+</div>

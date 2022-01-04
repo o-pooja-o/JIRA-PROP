@@ -8,6 +8,15 @@ $font: 'Roboto';
 .avatar:hover {
     outline: 3px solid #4585fe;
 }
+html,
+.body {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+}
 
 body {
     max-width: 100%;

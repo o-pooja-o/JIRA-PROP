@@ -1,3 +1,55 @@
-<div class="py-4 pl-5">
+<!-- <div class="py-4 pl-5"> -->
+<div class="h-100 page-container py-3 px-4" style="top: 0; overflow: auto; overflow-x: hidden">
     <app-bread-crumb [projectType]="type" [projectName]="name" [projectFeature]="feature"></app-bread-crumb>
-</div>
+    <div class="mt-2 mb-4 justify-content-between">
+        <div class="d-flex justify-content-between">
+            <div class="align-items-center mt-2"><h5>Kanban Board</h5></div>
+            <div class="justify-content-around">
+                <a class="btn" style="background-color: #f1f1f5">
+                    <span class="mr-5 fab fa-github mr-5"></span>Github Repo
+                </a>
+            </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-start mt-4">
+            <div class="mr-5">
+                <form>
+                    <div style="position: relative; height: 32px">
+                        <div
+                            class="ml-2 d-flex"
+                            style="position: absolute; top: 0; bottom: 0; /* display: flex; */ align-items: center"
+                        >
+                            <span class="fa fa-search" style="color: #43526f; font-size: 15px"></span>
+                        </div>
+                        <input class="pl-4 input" type="text" />
+                    </div>
+                </form>
+            </div>
+            <div>
+                <div *ngIf="membersQuery.selectLoading() | async; else showMembers">Loading data....</div>
+                <ng-template #showMembers>
+                    <app-avatar-group [size]="'big'" [members]="(members$ | async) || undefined"></app-avatar-group>
+                </ng-template>
+            </div>
+            <button class="btn" style="color: #42526e">Only My Issues</button>
+            <button class="btn" style="color: #42526e">Recently Updated</button>
+        </div>
+    </div>
+    <div class="body mt-4 d-flex list" jhiDragDrop>
+        <div *ngIf="issueQuery.selectLoading() | async; else showRecords">Loading data....</div>
+        <ng-template #showRecords>
+            <div
+                *ngFor="let l of list"
+                class="card-container col mr-2 p-2 justify-content-center"
+                style="background-color: #f4f5f7"
+                (fileDropped)="drop($event)"
+            >
+                <div class="py-2 text-uppercase box">
+                    {{ l }}
+                </div>
+                <div class="issue-wrap" *ngFor="let issue of getIssueByStatus(l) | async">
+                    <app-issue-card [issue]="issue"></app-issue-card>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+<!-- </div> -->
