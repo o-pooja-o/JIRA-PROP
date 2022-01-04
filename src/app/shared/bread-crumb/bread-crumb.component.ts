@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-bread-crumb',
@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bread-crumb.component.scss']
 })
 export class BreadCrumbComponent implements OnInit {
-
+  @Input() projectType!: string;
+  @Input() projectName!: string;
+  @Input() projectFeature!: string;
   constructor() { }
 
   ngOnInit() {

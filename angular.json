@@ -1,7 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "2b94c75f-a68d-4682-9850-e052a085c625"
+    "analytics": "2b94c75f-a68d-4682-9850-e052a085c625",
+    "defaultCollection": "@datorama/akita"
   },
   "version": 1,
   "newProjectRoot": "projects",
@@ -38,12 +39,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/@fortawesome/fontawesome-free/css/all.css"
+              "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/@fortawesome/fontawesome-free/js/all.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {

@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project-board.component.scss']
 })
 export class ProjectBoardComponent implements OnInit {
-
+  type = 'Projects';
+  name = 'Money Heist';
+  feature = 'Kanban Board';
   constructor() { }
 
   ngOnInit() {

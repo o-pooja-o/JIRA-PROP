@@ -1,0 +1,46 @@
+label {
+    font-size: 13px !important;
+    color: #5e6c84;
+    font-weight: bold;
+}
+input,
+select,
+textarea {
+    background-color: #f4f5f7;
+}
+input:hover,
+select:hover,
+textarea:hover {
+    background-color: #ebecf0;
+}
+select {
+    cursor: pointer;
+}
+input:focus-visible {
+    border: 2px solid #4485ff;
+    box-shadow: none;
+}
+textarea:focus-visible {
+    border: 2px solid black;
+    box-shadow: none;
+}
+select:focus-visible {
+    box-shadow: none;
+}
+button {
+    background-color: #2f53cc;
+    height: 2rem;
+    align-items: center;
+    border: radius 0.15rem;
+    box-shadow: none !important;
+}
+.popup {
+    opacity: 1;
+    background-color: rgb(11, 135, 91);
+    top: 15px;
+    right: 15px;
+    padding: 12px 20px;
+    color: #fff;
+    position: fixed;
+    border-radius: 0.2rem;
+}

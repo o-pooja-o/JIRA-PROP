@@ -1,3 +1,70 @@
-<p>
-  project-detail works!
-</p>
+<div class="py-4 pl-5">
+    <div class="m-0 p-0">
+        <app-bread-crumb
+            [projectType]="type"
+            [projectName]="currentProject.name"
+            [projectFeature]="feature"
+        ></app-bread-crumb>
+        <div class="text-dark font-weight-bold mx-0 px-0" style="font-size: 1.5rem">Project Details</div>
+    </div>
+    <form
+        class="p-0"
+        [formGroup]="projectDetailForm"
+        autocomplete="off"
+        (ngSubmit)="onClick()"
+        style="max-width: 640px"
+    >
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input
+                type="text"
+                id="name"
+                formControlName="name"
+                class="form-control"
+                placeholder="Project name"
+                style="color: #172b4d"
+            />
+        </div>
+
+        <div class="form-group">
+            <label for="url">URL</label>
+            <input
+                type="text"
+                id="url"
+                formControlName="url"
+                class="form-control"
+                placeholder="URL"
+                style="color: #172b4d"
+            />
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea
+                type="text"
+                rows="1"
+                id="description"
+                formControlName="description"
+                class="form-control"
+                placeholder="No Description"
+            ></textarea>
+            <span class="form-text text-muted" style="font-size: 13px"
+                >Describe the project in as much detail as you'd like.</span
+            >
+        </div>
+        <div class="form-group">
+            <label for="category">Project Category</label>
+            <select class="form-control" id="category" formControlName="category">
+                <option>Marketing</option>
+                <input type="search" placeholder="Search" aria-label="Search" />
+                <option>Business</option>
+                <option>Software</option>
+            </select>
+        </div>
+        <div class="popup" *ngIf="changesSaved">
+            <span>Changes have been saved successfully <span style="cursor: pointer">x</span></span>
+        </div>
+        <button class="btn btn-primary py-0" type="submit" [disabled]="!projectDetailForm.valid || isLoading">
+            Save Changes
+        </button>
+    </form>
+</div>

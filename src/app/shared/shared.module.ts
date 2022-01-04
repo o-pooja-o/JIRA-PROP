@@ -1,12 +1,12 @@
-import { NavbarComponent } from './navbar/navbar.component';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BreadCrumbComponent } from './bread-crumb/bread-crumb.component';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    imports: [
+        CommonModule
+    ],
+    declarations: [BreadCrumbComponent],
+    exports: [BreadCrumbComponent],
 })
 export class SharedModule { }
